@@ -1,16 +1,17 @@
 syntax = "proto3";
 
+option go_package = "/home/thiago/UFF/Sistemas Distribuidos/gRPC/pb";
+
 message HelloResquest {
     string name = 1;
 }
 
 message HelloResponse {
     string msg = 1;
-
 }
 
 service HelloService{
-    rpc Hello(HelloRequest) returns (helloResponse) {};
+    rpc Hello(HelloResquest) returns (HelloResponse) {};
 }
 
 
